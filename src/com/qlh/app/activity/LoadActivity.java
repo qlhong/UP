@@ -17,6 +17,7 @@ public class LoadActivity extends Activity {
 
 	protected void onCreate(Bundle paramBundle) {
 		super.onCreate(paramBundle);
+		System.out.println("111");
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 	}
 
