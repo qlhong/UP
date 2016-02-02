@@ -1,16 +1,82 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="12.0"
+        android:background="#ffff44be"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" >
+    </FrameLayout>
 
-</RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.20000005dip"
+        android:background="@color/light_gray" >
+    </View>
+
+    <LinearLayout
+        android:id="@+id/ll_maintab"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/main_dynamic"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/tabhost_dyanmic_selector"
+            android:gravity="center"
+            android:text="动态"
+            android:textColor="@color/deep_black" />
+
+        <TextView
+            android:id="@+id/main_surrounding"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/tabhost_location_selector"
+            android:gravity="center"
+            android:text="周边"
+            android:textColor="@color/deep_black" />
+
+        <TextView
+            android:id="@+id/main_mall"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/tabhost_shop_selector"
+            android:gravity="center"
+            android:text="商城"
+            android:textColor="@color/deep_black" />
+
+        <TextView
+            android:id="@+id/main_college"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/tabhost_college_selector"
+            android:gravity="center"
+            android:text="学院"
+            android:textColor="@color/deep_black" />
+
+        <TextView
+            android:id="@+id/main_my"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/tabhost_my_selector"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@color/deep_black" />
+    </LinearLayout>
+
+</LinearLayout>
